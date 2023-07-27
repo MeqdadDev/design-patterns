@@ -1,2 +1,2 @@
-# design-patterns
-Design Patterns Samples
+# Design Patterns
+[Design Patterns in Java](java)
