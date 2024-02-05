@@ -6,7 +6,7 @@ public class Game {
     static Random random = new Random();
 
     public static void main(String[] args) {
-        int enemyCounter = 7;
+        int enemyCounter = 5;
 
         while (enemyCounter > 0) {
             Enemy enemy = EnemyFactory.createEnemy(getRandom(1, 2));
@@ -16,6 +16,7 @@ public class Game {
     }
 
     public static int getRandom(int min, int max) {
-        return random.nextInt((max - min) + 1) + min;
+        int randomEnemyId = random.nextInt((max - min) + 1) + min;
+        return randomEnemyId;
     }
 }

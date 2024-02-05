@@ -31,6 +31,6 @@ public abstract class Enemy {
     }
     
     public void showUp(){
-        System.out.println(getName() + " is showing up. Damage is " + getDamage() + "Health is " + getHealth());
+        System.out.println(getName() + " is showing up. Damage is " + getDamage() + ". Health is " + getHealth());
     }
 }
