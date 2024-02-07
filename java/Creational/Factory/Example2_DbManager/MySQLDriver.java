@@ -1,10 +1,10 @@
 package DesignPatterns.Creational.Factory.DbManager;
 
 public class MySQLDriver extends DbDriver{
-    String dbType;
+    DbType dbType;
     public MySQLDriver(String dbName, int dbPort, String dbPassword){
         super(dbName, dbPort, dbPassword);
-        this.dbType = "MySQL";
+        this.dbType = DbType.MySQL;
         System.out.println("MySQL Driver is created.");
     }
 
@@ -21,7 +21,7 @@ public class MySQLDriver extends DbDriver{
     }
 
     @Override
-    public String getDbType() {
+    public DbType getDbType() {
         return dbType;
     }
 

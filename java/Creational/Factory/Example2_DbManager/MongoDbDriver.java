@@ -1,11 +1,11 @@
 package DesignPatterns.Creational.Factory.DbManager;
 
 public class MongoDbDriver extends DbDriver{
-    String dbType;
+    DbType dbType;
 
     public MongoDbDriver(String dbName, int dbPort, String dbPassword){
         super(dbName, dbPort, dbPassword);
-        this.dbType = "MongoDb";
+        this.dbType = DbType.MongoDB;
         System.out.println("MongoDb Driver is created.");
     }
 
@@ -22,7 +22,7 @@ public class MongoDbDriver extends DbDriver{
     }
 
     @Override
-    public String getDbType(){
+    public DbType getDbType(){
         return dbType;
     }
 }

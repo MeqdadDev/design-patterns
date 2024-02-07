@@ -5,18 +5,18 @@ public class DbClient {
         DbProvider dbProvider = new DbProvider();
 
         DbDriver employeesDb = dbProvider.CreateDb("employees", 1234,
-                "EMP_DB_PASSWORD_HERE", "MySQL");
+                "EMP_DB_PASSWORD_HERE", DbType.MySQL);
 
         employeesDb.connectDb();
 
         DbDriver analyticsDb = dbProvider.CreateDb("analytics", 5678,
-                "ANALYTICS_DB_PASSWORD_HERE", "MongoDb");
+                "ANALYTICS_DB_PASSWORD_HERE", DbType.MongoDB);
 
 //        analyticsDb.connectDb();
         System.out.println("Analytics Database Type is " + analyticsDb.getDbType());
 
         DbDriver productsDb = dbProvider.CreateDb("products", 2468,
-                "PRODUCTS_DB_PASSWORD_HERE", "PostgreSQL");
+                "PRODUCTS_DB_PASSWORD_HERE", DbType.PostgreSQL);
 
 //        productsDb.connectDb();
 

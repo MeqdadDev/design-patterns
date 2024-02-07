@@ -1,11 +1,11 @@
 package DesignPatterns.Creational.Factory.DbManager;
 
 public class PostgreSQLDriver extends DbDriver{
-    String dbType;
+    DbType dbType;
 
     public PostgreSQLDriver(String dbName, int dbPort, String dbPassword){
         super(dbName, dbPort, dbPassword);
-        this.dbType = "PostgreSQL";
+        this.dbType = DbType.PostgreSQL;
         System.out.println("PostgreSQL Driver is created.");
     }
 
@@ -22,7 +22,7 @@ public class PostgreSQLDriver extends DbDriver{
     }
 
     @Override
-    public String getDbType(){
+    public DbType getDbType(){
         return dbType;
     }
 }
