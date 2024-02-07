@@ -4,7 +4,7 @@ public class DbProvider {
 
     public DbProvider(){};
 
-    public DbDriver CreateDb(String dbName, int dbPort, String dbPassword, DbType dbType){
+    public DbDriver createDb(String dbName, int dbPort, String dbPassword, DbType dbType){
         switch (dbType){
             case MongoDB:
                 return new MongoDbDriver(dbName,dbPort,dbPassword);
