@@ -4,16 +4,17 @@ public class DbProvider {
 
     public DbProvider(){};
 
-    public DbDriver CreateDb(String dbName, int dbPort, String dbPassword, String dbType){
+    public DbDriver CreateDb(String dbName, int dbPort, String dbPassword, DbType dbType){
         switch (dbType){
-            case "MongoDb":
+            case MongoDB:
                 return new MongoDbDriver(dbName,dbPort,dbPassword);
-            case "PostgreSQL":
+            case PostgreSQL:
                 return new PostgreSQLDriver(dbName,dbPort,dbPassword);
-            case "MySQL":
+            case MySQL:
                 return new MySQLDriver(dbName,dbPort,dbPassword);
+            default:
+                throw new IllegalArgumentException("Unsupported database type: " + dbType);
         }
-        return null;
     }
 
 }
