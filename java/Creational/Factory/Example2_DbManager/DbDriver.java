@@ -15,7 +15,7 @@ abstract public class DbDriver {
 
     abstract public void disconnectDb();
 
-    abstract public String getDbType();
+    abstract public DbType getDbType();
 
     public String getDbName() {
         return dbName;
